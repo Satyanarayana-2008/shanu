@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111426"><title>EventSphere — Event operations, in harmony</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#dashboard"><span class="brand-mark">e<span>✳</span></span><span>event<span class="brand-light">sphere</span></span></a>
+    <div class="workspace-label">WORKSPACE <button class="workspace-switch">NORTHSTAR STUDIO⌄</button></div>
+    <nav class="nav" id="nav">
+      <div class="nav-caption">OVERVIEW</div>
+      <button class="nav-item active" data-page="dashboard"><span>▦</span> Overview</button>
+      <div class="nav-caption">MANAGE</div>
+      <button class="nav-item" data-page="events"><span>◈</span> Events <b class="nav-count" id="eventCount">0</b></button>
+      <button class="nav-item" data-page="venues"><span>⌂</span> Venues</button>
+      <button class="nav-item" data-page="participants"><span>♙</span> Participants</button>
+      <button class="nav-item" data-page="registrations"><span>▤</span> Registrations</button>
+      <button class="nav-item" data-page="payments"><span>◉</span> Payments</button>
+      <button class="nav-item" data-page="speakers"><span>♧</span> Speakers</button>
+      <button class="nav-item" data-page="schedule"><span>◷</span> Schedule & sessions</button>
+      <button class="nav-item" data-page="attendance"><span>✓</span> Attendance</button>
+      <button class="nav-item" data-page="feedback"><span>☆</span> Feedback</button>
+      <button class="nav-item" data-page="organizers"><span>♧</span> Organizers</button>
+      <button class="nav-item" data-page="certificates"><span>♜</span> Certificates</button>
+      <div class="nav-caption">INSIGHTS</div>
+      <button class="nav-item" data-page="reports"><span>⌁</span> Reports & analytics</button>
+      <button class="nav-item" data-page="notifications"><span>♧</span> Notifications <i class="unread-dot"></i></button>
+    </nav>
+    <div class="sidebar-bottom"><button class="nav-item" data-page="settings"><span>⚙</span> Settings</button><div class="profile"><div class="avatar avatar-violet">AM</div><div><strong>Alex Morgan</strong><small>Event director</small></div><button class="more-btn">···</button></div></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><button class="icon-button mobile-menu" id="menuToggle">☰</button><div class="breadcrumb">Workspace <span>/</span> <strong id="crumb">Overview</strong></div><div class="top-actions"><button class="search-trigger" id="globalSearch">⌕ <span>Search anything...</span><kbd>⌘ K</kbd></button><button class="icon-button" id="topNotifications" aria-label="Notifications">♧<i class="live-dot"></i></button><div class="avatar avatar-photo">AM</div></div></header>
+    <section class="page-wrap" id="pageRoot"></section>
+    <footer class="footer"><span>© 2025 EventSphere, Inc.</span><span>Made for moments that matter <b>✳</b></span><span>Help center &nbsp;·&nbsp; What's new <i class="version-dot"></i></span></footer>
+  </main>
+</div>
+<div class="modal-backdrop" id="modalBackdrop"><section class="modal" id="modal" role="dialog" aria-modal="true"></section></div>
+<div class="toast-stack" id="toastStack" aria-live="polite"></div>
+<script src="script.js"></script>
+</body></html>
+
